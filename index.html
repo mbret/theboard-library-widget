@@ -7,8 +7,22 @@
 </head>
 <body>
     <p>My widget</p>
+
+    <!--Include framework-->
+    <script src="dist/library.js"></script>
+
+    <script src="index.js"></script>
+
+    <script>
+        theBoardModule.start({
+            widget: {
+                configuration: {
+                    identity: 'Daily Word',
+                }
+            }
+        });
+    </script>
+
 </body>
-<script src="index.js"></script>
-<!--Include framework-->
-<script src="dist/library.js"></script>
+
 </html>
