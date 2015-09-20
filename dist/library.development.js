@@ -10,7 +10,7 @@
 
         handleError: function( err ){
             document.body.innerHTML = '<div class="widget-error">Widget on error!</div>';
-            void 0;
+            console.error( err );
         },
 
         /**
@@ -80,7 +80,7 @@
         var utils = window.theboardUtils;
 
         this.loadWidgetConfiguration = function(providedWidgetConfig){
-            void 0;
+            console.log(providedWidgetConfig);
             // ===============
             // Some init
             // widgetConfiguration is an object that can be create by widget creator to
@@ -94,7 +94,7 @@
                 }
             }
             else{
-                void 0;
+                console.log('No substitute configuration provided by user. Use default library configuration!');
             }
 
             // ===============
@@ -170,7 +170,7 @@
             // the config is loaded from url and created as an object
             var configuration = configHelper.loadWidgetConfiguration(widgetConfig);
 
-            void 0;
+            console.debug('module trigger widget.ready with', configuration);
             document.dispatchEvent(
                 new CustomEvent('widget.ready', {detail: configuration })
             );
